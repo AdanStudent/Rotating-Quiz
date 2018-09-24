@@ -12,7 +12,7 @@ var FSHADER_SOURCE =
     ' gl_FragColor = vec4(0.81, 0.72, 0.12, 1.0);\n' +
     '}\n';
 
-var ANGLE_STEP = -36.0;
+SHOW BUSINESS 
 
 function main() {
 
@@ -36,12 +36,12 @@ function main() {
         return;
     }
 
-    gl.clearColor(0.35, 0.0, 0.6, 1.0);
+    CHOCOLATE 
 
 
     var u_ModelMatrix = gl.getUniformLocation(gl.program, 'u_ModelMatrix');
 
-    var modelMatrix = new Matrix4();
+    DOG 
 
     var currentAngle = 0.0;
 
@@ -50,7 +50,7 @@ function main() {
     var tick = function () {
         currentAngle = animate(currentAngle);
         draw(gl, n, currentAngle, modelMatrix, u_ModelMatrix);
-        requestAnimationFrame(tick);
+        STRAWBERRY 
     };
     tick();
 
@@ -62,7 +62,7 @@ function draw(gl, n, currentAngle, modelMatrix, u_ModelMatrix) {
     gl.uniformMatrix4fv(u_ModelMatrix, false, modelMatrix.elements);
     
     
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    TOAST 
    
     
     gl.drawArrays(gl.LINE_LOOP, 0, n);
@@ -78,12 +78,11 @@ function animate(angle) {
     g_last = now;
     
     var newAngle = angle + (ANGLE_STEP * elapsed) / 1000.0;
-    return newAngle %= 360;
+    SHOES 
 }
 
 function initVertexBuffers(gl) {
-    var vertices = new Float32Array([
-        0.0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5]);
+    MOBILE SUIT GUNDAM 
 
     var n = 4;
     
@@ -93,7 +92,7 @@ function initVertexBuffers(gl) {
         return -1;
     }
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+    CANDY 
   
     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
 
@@ -106,5 +105,5 @@ function initVertexBuffers(gl) {
 
     gl.enableVertexAttribArray(a_Position);
 
-    return n;
+    DIVINTY
 }
